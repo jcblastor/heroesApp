@@ -3,26 +3,8 @@
 <br/>
 
 <div class="card__container">
-  <mat-card *ngFor="let heroe of heroes" >
-    <mat-card-title> {{ heroe.superhero }} </mat-card-title>
-    <mat-card-subtitle> {{ heroe.alter_ego }} </mat-card-subtitle>
-
-    <img mat-card-image src="../../../../assets/heroes/{{heroe.id}}.jpg" alt=""/>
-
-    <mat-card-content>
-      <h3> {{ heroe.publisher }} </h3>
-      <p>
-        <strong>Primera aparición: </strong> {{ heroe.first_appearance }}
-        <br/>
-        <strong>Personajes: </strong> {{ heroe.characters }}
-      </p>
-    </mat-card-content>
-
-    <mat-card-actions>
-      <button mat-button color="info">Leer más...</button>
-      <button mat-button color="warn">Editar</button>
-    </mat-card-actions>
-
-  </mat-card>
+  <div class="heroe" *ngFor="let heroe of heroes" >
+    <app-heroe-tarjeta [heroe]="heroe"></app-heroe-tarjeta>
+  </div>
 
 </div>
